@@ -1,0 +1,35 @@
+﻿
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<style>
+    .outputValue{
+        align-content: center;
+        font-size: large;
+        text-align: center;
+    }
+</style>
+@using (Html.BeginForm())
+{
+   <div class="text-center">
+    <label for="temperature" id="from-box">From:</label>
+        <select name="temperature" id="temperature">
+            <option value="Celsius">Celsius</option>
+            <option value="Kelvin">Kelvin</option>
+            <option value="Fahrenheit">Fahrenheit</option>
+        </select>
+         <select name="temperature2" id="temperature2">
+            <option value="Celsius">Celsius</option>
+            <option value="Kelvin">Kelvin</option>
+            <option value="Fahrenheit">Fahrenheit</option>
+        </select>
+     <input type="number" id="ans" name="ans">
+     <input type="submit" value="Convert">
+     <label for="temprature2">To:</label>
+   
+    <div class="outputValue">
+        <output>Output: @ViewData["ans"]</output>
+    </div>
+   </div>
+}
